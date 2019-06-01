@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F3F7F7"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:elevation="100dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="0dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="55dp"
+            android:text="Add Lead"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="8dp">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:clipChildren="false"
+                        android:textColorHint="#757575"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                        <EditText
+                            android:id="@+id/tenantNameEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="10"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            android:paddingStart="10dp"
+                            android:textSize="18dp"
+                            android:translationY="4dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:clipChildren="false"
+                        android:textColorHint="#757575"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+                        <EditText
+                            android:id="@+id/tenantPhoneEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="10"
+                            android:hint="Phone"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:paddingStart="10dp"
+                            android:textSize="18dp"
+                            android:translationY="4dp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:clipChildren="false"
+                        android:textColorHint="#757575"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout19">
+
+                        <TextView
+                            android:id="@+id/tenantGenderEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="10"
+                            android:hint="Gender"
+                            android:inputType="text"
+                            android:paddingStart="10dp"
+                            android:textSize="18dp"
+                            android:translationY="4dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-13dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="16dp"
+                                android:layout_height="1dp"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="70dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/genderRadioGroup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/maleRadioButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="Male"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                                <RadioButton
+                                    android:id="@+id/femaleRadioButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="Female"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                                <RadioButton
+                                    android:id="@+id/otherRadioButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="Others"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:clipChildren="false"
+                        android:textColorHint="#757575"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout13">
+
+                        <TextView
+                            android:id="@+id/tenantRentEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="10"
+                            android:hint="Rent Amount"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:textSize="18dp"
+                            android:translationY="4dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-27dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="16dp"
+                                android:layout_height="1dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="115dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioGroup
+                                android:id="@+id/rentRadioGroup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rentRadioButton1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="4K"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                                <RadioButton
+                                    android:id="@+id/rentRadioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="4K-8K"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                                <RadioButton
+                                    android:id="@+id/rentRadioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="8K-12K"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                                <RadioButton
+                                    android:id="@+id/rentRadioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="12K+"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:clipChildren="false"
+                        android:textColorHint="#757575"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout14">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="10"
+                           android:hint="Room type preferred"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:textSize="18dp"
+                            android:translationY="4dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-27dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="16dp"
+                                android:layout_height="1dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="179dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:id="@+id/roomRadioGroup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/roomRadioButton1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="Single"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                                <RadioButton
+                                    android:id="@+id/roomRadioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="Double"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                                <RadioButton
+                                    android:id="@+id/roomRadioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="Triple"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                                <RadioButton
+                                    android:id="@+id/roomRadioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:paddingStart="2dp"
+                                    android:text="Triple plus"
+                                    android:textSize="14sp"
+                                    android:translationY="4dp" />
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/textInputLayout22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:clipChildren="false"
+                        android:textColorHint="#757575"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout15">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="5dp"
+                            android:ems="10"
+                            android:hint="Facilities"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:textSize="18dp"
+                            android:translationY="4dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-12dp"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="16dp"
+                                android:layout_height="1dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="80dp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/acLeadCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="5dp"
+                                android:paddingStart="2dp"
+                                android:text="AC"
+                                android:translationY="4dp" />
+
+                            <CheckBox
+                                android:id="@+id/messLeadCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="5dp"
+                                android:paddingStart="2dp"
+                                android:text="Mess"
+                                android:translationY="4dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/washroomLeadCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="5dp"
+                                android:paddingStart="2dp"
+                                android:text="Attach Washroom"
+                                android:translationY="4dp" />
+
+                            <CheckBox
+                                android:id="@+id/wifiLeadCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="5dp"
+                                android:paddingStart="2dp"
+                                android:text="WiFi"
+                                android:translationY="4dp" />
+                        </LinearLayout>
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <Button
+                        android:id="@+id/cancelLeadButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@android:color/transparent"
+                        android:text="CANCEL"
+                        android:textColor="#616162"
+                        app:layout_constraintEnd_toStartOf="@+id/addLeadButton"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout22" />
+
+                    <Button
+                        android:id="@+id/addLeadButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@android:color/transparent"
+                        android:elevation="24dp"
+                        android:inputType="number"
+                        android:text="ADD"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="@+id/textInputLayout22"
+                        app:layout_constraintTop_toBottomOf="@+id/textInputLayout22" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
